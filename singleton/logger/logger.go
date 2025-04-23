@@ -1,27 +1,4 @@
-package main
-
-// Factory init example
-
-/*
-	func main() {
-		sms, err := notifier.NewNotifier("sms")
-		if err != nil {
-			fmt.Printf("Error: %s", err.Error())
-		}
-		if err := sms.Send("Hello!"); err != nil {
-			fmt.Printf("Error: %s", err.Error())
-		}
-
-		email, err := notifier.NewNotifier("email")
-		if err != nil {
-			fmt.Printf("Error: %s", err.Error())
-		}
-		if err := email.Send("Salom!"); err != nil {
-			fmt.Printf("Error: %s", err.Error())
-		}
-
-	}
-*/
+package logger
 
 import (
 	"fmt"
@@ -50,8 +27,6 @@ func GetLogger() *Logger {
 func main() {
 	log1 := GetLogger()
 	log2 := GetLogger()
-	fmt.Println("log1->>", &log1)
-	fmt.Println("log2->>", &log2)
 
 	log1.Log("Started application.")
 	log1.Log("User signed in.")
